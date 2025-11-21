@@ -21,8 +21,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ stdlib('c') }}
     - cmake
-    - ninja
-    - python
+    - ninja-base
   host:
   run:
 
