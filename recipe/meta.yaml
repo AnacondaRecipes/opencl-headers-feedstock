@@ -39,6 +39,7 @@ about:
   license: Apache-2.0
   license_file: LICENSE
   summary: OpenCL headers
+  description: C language headers for the OpenCL API.
   dev_url: https://github.com/KhronosGroup/OpenCL-Headers
   doc_url: https://registry.khronos.org/OpenCL/
 extra:
