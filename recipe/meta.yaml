@@ -1,4 +1,4 @@
-{% set version = "2025.07.22" %}
+{% set version = "2026.05.29" %}
 
 package:
   name: opencl-headers
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/KhronosGroup/OpenCL-Headers/archive/v{{ version }}.zip
-  sha256: ef9ba8d4231110bb369becb20cb98259d94a448fc8232ede96551c26d110840f
+  sha256: 0bdef6f653c577827a75fac3e3f18b0bf000171e39fa65c2eb84ec804c822cab
 
 build:
   number: 0
@@ -27,11 +27,11 @@ requirements:
 
 test:
   commands:
-    - if not exist %LIBRARY_INC%\\CL\\cl.h exit 1                       # [win]
-    - if not exist %LIBRARY_LIB%\\pkgconfig\\OpenCL-Headers.pc exit 1   # [win]
-    - test -f $PREFIX/include/OpenCL/cl.h                               # [osx]
-    - test -f $PREFIX/include/CL/cl.h                                   # [unix]
-    - test -f $PREFIX/lib/pkgconfig/OpenCL-Headers.pc                   # [unix]
+    - if not exist %LIBRARY_INC%\\CL\\cl.h exit 1  # [win]
+    - if not exist %LIBRARY_LIB%\\pkgconfig\\OpenCL-Headers.pc exit 1  # [win]
+    - test -f $PREFIX/include/OpenCL/cl.h  # [osx]
+    - test -f $PREFIX/include/CL/cl.h  # [unix]
+    - test -f $PREFIX/lib/pkgconfig/OpenCL-Headers.pc  # [unix]
 
 about:
   home: https://registry.khronos.org/OpenCL/
@@ -41,6 +41,7 @@ about:
   description: C language headers for the OpenCL API.
   dev_url: https://github.com/KhronosGroup/OpenCL-Headers
   doc_url: https://registry.khronos.org/OpenCL/
+
 extra:
   recipe-maintainers:
     - isuruf
