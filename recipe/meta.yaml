@@ -1,4 +1,4 @@
-{% set version = "2025.07.22" %}
+{% set version = "2026.05.29" %}
 
 package:
   name: opencl-headers
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/KhronosGroup/OpenCL-Headers/archive/v{{ version }}.zip
-  sha256: ef9ba8d4231110bb369becb20cb98259d94a448fc8232ede96551c26d110840f
+  sha256: 0bdef6f653c577827a75fac3e3f18b0bf000171e39fa65c2eb84ec804c822cab
 
 build:
   number: 0
@@ -36,6 +36,7 @@ test:
 about:
   home: https://registry.khronos.org/OpenCL/
   license: Apache-2.0
+  license_family: Apache
   license_file: LICENSE
   summary: OpenCL headers
   description: C language headers for the OpenCL API.
@@ -44,3 +45,6 @@ about:
 extra:
   recipe-maintainers:
     - isuruf
+  skip-lints:
+    # dev and doc URLs are protected with cloudflare
+    - reachable_url
