@@ -36,6 +36,7 @@ test:
 about:
   home: https://registry.khronos.org/OpenCL/
   license: Apache-2.0
+  license_family: Apache
   license_file: LICENSE
   summary: OpenCL headers
   description: C language headers for the OpenCL API.
@@ -44,3 +45,6 @@ about:
 extra:
   recipe-maintainers:
     - isuruf
+  skip-lints:
+    # dev and doc URLs are protected with cloudflare
+    - reachable_url
